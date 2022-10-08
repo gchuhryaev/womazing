@@ -1,44 +1,93 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 *::before,
 ::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 ol,
 ul,
 menu {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+  color: inherit;
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
-    font-style: none;
-    font-weight: 400;
-    font-size: 14px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .container {
-    max-width: 1140px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 15px;
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .nav {
-    display: flex;
-    justify-content: space-between;
-    
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__item {
+  margin-right: 45px;
+}
+.nav__item:last-child {
+  margin-right: 0;
+}
+.nav_link {
+  color: #6e9c9f;
+}
+.nav__phone::before {
+    content:'';
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    left: 0;
+    top: -4px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(/image/home/colections/icons/Telephon.svg)
+}
+.nav__phone {
+    position: relative;
+    padding-left: 35px;
+    margin-right: 85px;
+}
+.nav__cart {
+  position: relative;
+  padding-left: 35px;
+  font-size: 0;
+  width: 24px;
+  height: 24px;
+}
+.nav__cart::after {
+  content:'';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 0;
+  top: -17px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(/image/home/colections/icons/SHOPINGBAG.svg);
 }
